@@ -1,46 +1,9 @@
-<%= simple_form_for(restaurant) do |f| %>
+<%= imple_form_for [@restaurant, @review] do |f| %>
   <%= f.input :name %>
   <%= f.input :address %>
   <%= f.input :phone_number %>
   <%= f.input :category %>
-  <%= f.submit %>
-<% end %>
-
-<%= simple_form_for(review) do |f| %>
   <%= f.input :rating %>
   <%= f.input :content %>
   <%= f.submit %>
 <% end %>
-
-<form class="simple_form new_restaurant" id="new_restaurant" novalidate="novalidate" action="/restaurants" accept-charset="UTF-8" method="post">
-  <input type="hidden" name="authenticity_token" value="6mcCvU7ZazpIBcJTptw/8y4EucmzccFWli7tFUzX6IJEx8wq6PFC7m4rA1Jy+W4YW1hlhYhSOyhZefWtOM5ofQ==">
-  <div class="mb-3 string optional restaurant_name">
-    <label class="string optional" for="restaurant_name">Name</label>
-    <input class="form-control string optional" type="text" name="restaurant[name]" id="restaurant_name">
-  </div>
-  <div class="mb-3 string optional restaurant_address">
-    <label class="string optional" for="restaurant_address">Address</label>
-    <input class="form-control string optional" type="text" name="restaurant[address]" id="restaurant_address">
-  </div>
-   <div class="mb-3 string optional restaurant_phone">
-    <label class="string optional" for="restaurant_phone">Phone Number</label>
-    <input class="form-control string optional" type="text" name="restaurant[phone]" id="restaurant_phone">
-  </div>
-   <div class="mb-3 string optional restaurant_category">
-    <label class="string optional" for="restaurant_category">Category</label>
-    <input class="form-control string optional" type="text" name="restaurant[category]" id="restaurant_category">
-  </div>
-  <input type="submit" name="commit" value="Create Restaurant" data-disable-with="Create Restaurant">
-</form>
-
-
-<%# <form class="simple_form new_restaurant" id="new_restaurant" novalidate="novalidate" action="/restaurants" accept-charset="UTF-8" method="post">
-  <input type="hidden" name="authenticity_token" value="6mcCvU7ZazpIBcJTptw/8y4EucmzccFWli7tFUzX6IJEx8wq6PFC7m4rA1Jy+W4YW1hlhYhSOyhZefWtOM5ofQ==">
-  <div class="mb-3 string optional restaurant_name">
-    <label class="string optional" for="restaurant_name">Name</label>
-    <input class="form-control string optional" type="text" name="restaurant[name]" id="restaurant_name">
-  </div>
-  <div class="mb-3 string optional restaurant_address">
-    <label class="string optional" for="restaurant_address">Address</label>
-    <input class="form-control string optional" type="text" name="restaurant[address]" id="restaurant_address">
-  </div> %>
