@@ -1,10 +1,16 @@
-<h1>Editing restaurant</h1>
 
-<%= render "form", restaurant: @restaurant %>
+<link rel="stylesheet" href="application.css">
 
-<br>
+<h1> Edit Restaurant </h1>
+
+<%= simple_form_for [@restaurant] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :phone_number %>
+  <%= f.input :category %>
+  <%= f.submit %>
+<% end %>
 
 <div>
-  <%= link_to "Show this restaurant", @restaurant %> |
   <%= link_to "Back to restaurants", restaurants_path %>
 </div>

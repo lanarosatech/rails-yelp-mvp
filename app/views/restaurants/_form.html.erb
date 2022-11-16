@@ -1,9 +1,9 @@
-<%= imple_form_for [@restaurant, @review] do |f| %>
+<link rel="stylesheet" href="application.css">
+
+<%= simple_form_for [@restaurant] do |f| %>
   <%= f.input :name %>
   <%= f.input :address %>
   <%= f.input :phone_number %>
   <%= f.input :category %>
-  <%= f.input :rating %>
-  <%= f.input :content %>
   <%= f.submit %>
 <% end %>
