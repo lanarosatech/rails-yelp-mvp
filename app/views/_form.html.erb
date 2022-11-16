@@ -1,0 +1,19 @@
+<%= simple_form_for(restaurant) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :rating %>
+  <%= f.submit %>
+<% end %>
+
+<form class="simple_form new_restaurant" id="new_restaurant" novalidate="novalidate" action="/restaurants" accept-charset="UTF-8" method="post">
+  <input type="hidden" name="authenticity_token" value="6mcCvU7ZazpIBcJTptw/8y4EucmzccFWli7tFUzX6IJEx8wq6PFC7m4rA1Jy+W4YW1hlhYhSOyhZefWtOM5ofQ==">
+  <div class="mb-3 string optional restaurant_name">
+    <label class="string optional" for="restaurant_name">Name</label>
+    <input class="form-control string optional" type="text" name="restaurant[name]" id="restaurant_name">
+  </div>
+  <div class="mb-3 string optional restaurant_address">
+    <label class="string optional" for="restaurant_address">Address</label>
+    <input class="form-control string optional" type="text" name="restaurant[address]" id="restaurant_address">
+  </div>
+  <input type="submit" name="commit" value="Create Restaurant" data-disable-with="Create Restaurant">
+</form>
